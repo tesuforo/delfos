@@ -6,8 +6,8 @@ import { authOptions } from "./api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Home Page",
-  description: "Home Page Description",
+  title: "Delfos",
+  description: "Delfos Description",
 };
 
 async function HomePage() {

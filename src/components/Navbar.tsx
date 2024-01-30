@@ -21,7 +21,7 @@ function Navbar() {
       <Container>
         <Flex justify="between" align="center">
           <NextLink href="/">
-            <Heading>RadixNext</Heading>
+            <Heading>Delfos</Heading>
           </NextLink>
 
           <ul className="flex gap-x-2 items-center">
@@ -37,7 +37,7 @@ function Navbar() {
                 <li>
                   <Link asChild>
                     <NextLink href="/auth/register" passHref>
-                      Register
+                      registrarse
                     </NextLink>
                   </Link>
                 </li>
@@ -62,11 +62,11 @@ function Navbar() {
                       </Button>
                     </DropdownMenu.Trigger>
                     <DropdownMenu.Content>
-                      <DropdownMenu.Item>My Profile</DropdownMenu.Item>
-                      <DropdownMenu.Item>Settings</DropdownMenu.Item>
+                      <DropdownMenu.Item>Mi perfil</DropdownMenu.Item>
+                      <DropdownMenu.Item>Configuraciones</DropdownMenu.Item>
                       <DropdownMenu.Separator />
                       <DropdownMenu.Item color="red" onClick={() => signOut()}>
-                        Logout
+                        Salir
                       </DropdownMenu.Item>
                     </DropdownMenu.Content>
                   </DropdownMenu.Root>
