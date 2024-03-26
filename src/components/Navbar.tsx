@@ -21,7 +21,7 @@ function Navbar() {
       <Container>
         <Flex justify="between" align="center">
           <NextLink href="/">
-            <Heading>Delfos</Heading>
+            <Heading>Radicación Quirurgica</Heading>
           </NextLink>
 
           <ul className="flex gap-x-2 items-center">

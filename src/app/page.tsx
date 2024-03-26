@@ -6,8 +6,8 @@ import { authOptions } from "./api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Delfos",
-  description: "Delfos Description",
+  title: "Radicación Quirurgica",
+  description: "Radicacion Quirurgica",
 };
 
 async function HomePage() {
@@ -20,12 +20,9 @@ async function HomePage() {
   return (
     <Container className="px-5 md:px-0">
       <header className="my-4 bg-slate-900 p-10 rounded-md">
-        <h1 className="text-7xl my-10">NextAuth Radix</h1>
+        <h1 className="text-7xl my-10">Radicacíon Quirurgica</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sunt
-          suscipit molestiae autem provident, sint magnam numquam consequuntur,
-          ipsum officiis vitae quod dolor excepturi recusandae? Porro enim error
-          voluptatibus commodi.
+         Para Zentria es de suma importancia garantizar el cuidado y protección de sus pacientes, Con un sistema donde el radicador  registra los  casos del evento  quirurgico  y pasan por los comites regionales para su concepto medico,  existen otros actores como los trabajadores sociales que hacen del proceso la auditoria  completa de los casos.
         </p>
 
         <div className="mt-5">
