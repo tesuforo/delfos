@@ -21,6 +21,7 @@ function TaskNewPage() {
     values: {
       title: "",
       description: "",
+      identificacion:"",
     },
   });
   const router = useRouter();
@@ -62,6 +63,7 @@ function TaskNewPage() {
         console.log(res);
         setValue("title", res.data.title);
         setValue("description", res.data.description);
+        setValue("identificacion", res.data.identificacion);
       });
     }
   }, []);
@@ -75,9 +77,40 @@ function TaskNewPage() {
               <Heading>
                 {params.projectId ? "Edit Project" : "New Project"}
               </Heading>
-              <label>Project Title</label>
+
+               <label>Indentificación</label>
+              <Controller
+                name="identificacion"
+                control={control}
+                render={({ field }) => {
+                  return (
+                    <TextField.Input
+                      size="3"
+                      placeholder="Identificacion del Usuario"
+                      {...field}
+                    />
+                  );
+                }}
+              />
+
+              <label> Nombre Completo</label>
               <Controller
                 name="title"
+                control={control}
+                render={({ field }) => {
+                  return (
+                    <TextField.Input
+                      size="3"
+                      placeholder="nombre"
+                      {...field}
+                    />
+                  );
+                }}
+              />
+
+              <label> Sede Atencion</label>
+              <Controller
+                name="description"
                 control={control}
                 render={({ field }) => {
                   return (
@@ -90,20 +123,8 @@ function TaskNewPage() {
                 }}
               />
 
-              <label>Project Description</label>
-              <Controller
-                name="description"
-                control={control}
-                render={({ field }) => {
-                  return (
-                    <TextArea
-                      size="3"
-                      placeholder="Reply to comment…"
-                      {...field}
-                    />
-                  );
-                }}
-              />
+               
+
 
               <Button>
                 {params.projectId ? "Edit Project" : "Create Project"}

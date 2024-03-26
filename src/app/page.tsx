@@ -8,6 +8,7 @@ import { redirect } from "next/navigation";
 export const metadata: Metadata = {
   title: "Radicación Quirurgica",
   description: "Radicacion Quirurgica",
+  identificacion:"Radicacion Quirurgica"
 };
 
 async function HomePage() {

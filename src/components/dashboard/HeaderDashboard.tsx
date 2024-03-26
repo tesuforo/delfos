@@ -7,9 +7,9 @@ function HeaderDashboard() {
 
   return (
     <div className="flex justify-between items-center mb-4">
-      <Heading>Projects</Heading>
+      <Heading>Radicacion Quirurgica</Heading>
       <Button onClick={() => router.push("/dashboard/projects/new")}>
-        Add Project
+        Agregar Radicación
       </Button>
     </div>
   );

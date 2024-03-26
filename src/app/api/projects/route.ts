@@ -21,6 +21,7 @@ export async function POST(request: Request) {
     data: {
       title: data.title,
       description: data.description,
+      identificacion:data.identificacion,
       user: {
         connect: {
           id: parseInt(session.user.id),

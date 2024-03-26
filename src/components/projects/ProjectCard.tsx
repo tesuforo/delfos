@@ -19,6 +19,7 @@ function ProjectCard({ project }: Props) {
     >
       <Heading>{project.title}</Heading>
       <Text className="text-slate-500">{project.description}</Text>
+       <Text className="text-slate-500">{project.identificacion}</Text>
     </Card>
   );
 }
