@@ -21,7 +21,7 @@ async function HomePage() {
   return (
     <Container className="px-5 md:px-0">
       <header className="my-4 bg-slate-900 p-10 rounded-md">
-        <h1 className="text-7xl my-10">Radicacíon Quirurgica</h1>
+        <h1 className="text-7xl my-10">Radicacíón Quirurgica</h1>
         <p>
          Para Zentria es de suma importancia garantizar el cuidado y protección de sus pacientes, Con un sistema donde el radicador  registra los  casos del evento  quirurgico  y pasan por los comites regionales para su concepto medico,  existen otros actores como los trabajadores sociales que hacen del proceso la auditoria  completa de los casos.
         </p>
