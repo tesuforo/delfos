@@ -9,7 +9,7 @@ datasource db {
 
   provider = "postgresql"
 
- url      = "postgresql://postgres:-B-eBaa2d2Db1Df-25e*25fB24c*Gg5*@monorail.proxy.rlwy.net:10918/railway"
+ url      = "postgresql://postgres:DmulDUueBzQhvUyXkEoyJEQJvWmTqIov@monorail.proxy.rlwy.net:15990/railway"
 
 }
 
