@@ -75,7 +75,7 @@ function TaskNewPage() {
           <Card className="w-full p-7">
             <form className="flex flex-col gap-y-2" onSubmit={onSubmit}>
               <Heading>
-                {params.projectId ? "Edit Project" : "New Project"}
+                {params.projectId ? "Editar Radicación" : "Nueva Radicación"}
               </Heading>
 
                <label>Indentificación</label>
