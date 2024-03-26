@@ -21,7 +21,10 @@ function TaskNewPage() {
     values: {
       title: "",
       description: "",
-      identificacion:"",
+      identificacion: "",
+      dx1: "",
+      cups: "",
+
     },
   });
   const router = useRouter();
@@ -64,6 +67,8 @@ function TaskNewPage() {
         setValue("title", res.data.title);
         setValue("description", res.data.description);
         setValue("identificacion", res.data.identificacion);
+        setValue("dx1", res.data.dx1);
+        setValue("cups", res.data.cups);
       });
     }
   }, []);
@@ -122,6 +127,38 @@ function TaskNewPage() {
                   );
                 }}
               />
+
+              <label> DX 1</label>
+              <Controller
+                name="dx1"
+                control={control}
+                render={({ field }) => {
+                  return (
+                    <TextField.Input
+                      size="3"
+                      placeholder="Diagnostico"
+                      {...field}
+                    />
+                  );
+                }}
+              />
+
+
+              <label> CUPS</label>
+              <Controller
+                name="cups"
+                control={control}
+                render={({ field }) => {
+                  return (
+                    <TextField.Input
+                      size="3"
+                      placeholder="CUPS"
+                      {...field}
+                    />
+                  );
+                }}
+              />
+
 
                
 

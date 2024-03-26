@@ -29,6 +29,9 @@ model Project {
   title String
   description String
   identificacion String
+  dx1 String
+  cups String
+
 
   userId Int
   user User @relation(fields: [userId], references: [id])
