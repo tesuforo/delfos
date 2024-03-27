@@ -7,14 +7,21 @@ import {
   Container,
   Flex,
   Card,
+  Table,
+  TableRow,
   Heading,
 } from "@radix-ui/themes";
+
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
 import { useRouter, useParams } from "next/navigation";
 import { TrashIcon } from "@radix-ui/react-icons";
 import { toast } from "sonner";
 import { useEffect } from "react";
+
+
+
+
 
 function TaskNewPage() {
   const { control, handleSubmit, setValue } = useForm({
@@ -23,7 +30,7 @@ function TaskNewPage() {
       description: "",
       identificacion: "",
       dx1: "",
-      cups: "",
+      cups:"",
 
     },
   });
@@ -75,14 +82,16 @@ function TaskNewPage() {
 
   return (
     <div>
-      <Container size="1" height="100%" className="p-3 md:p-0">
+      <Container size="2" height="100%" className="p-3 md:p-0">
         <Flex className="h-screen w-full items-center">
           <Card className="w-full p-7">
             <form className="flex flex-col gap-y-2" onSubmit={onSubmit}>
+  
               <Heading>
                 {params.projectId ? "Editar Radicación" : "Nueva Radicación"}
               </Heading>
 
+ <div className="grid md:grid-cols-2 md:gap-6">
                <label>Indentificación</label>
               <Controller
                 name="identificacion"
@@ -97,7 +106,9 @@ function TaskNewPage() {
                   );
                 }}
               />
+              
 
+ 
               <label> Nombre Completo</label>
               <Controller
                 name="title"
@@ -112,6 +123,9 @@ function TaskNewPage() {
                   );
                 }}
               />
+    </div>
+
+        <div className="grid md:grid-cols-2 md:gap-6">
 
               <label> Sede Atencion</label>
               <Controller
@@ -128,6 +142,9 @@ function TaskNewPage() {
                 }}
               />
 
+              
+
+ 
               <label> DX 1</label>
               <Controller
                 name="dx1"
@@ -142,6 +159,11 @@ function TaskNewPage() {
                   );
                 }}
               />
+</div>
+
+
+
+<div className="grid md:grid-cols-2 md:gap-6">
 
 
               <label> CUPS</label>
@@ -160,12 +182,17 @@ function TaskNewPage() {
               />
 
 
+
+
+
                
 
 
               <Button>
                 {params.projectId ? "Edit Project" : "Create Project"}
               </Button>
+
+</div>
             </form>
 
             <div className="flex justify-end my-4">
