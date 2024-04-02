@@ -21,9 +21,13 @@ export async function POST(request: Request) {
     data: {
       title: data.title,
       description: data.description,
-      identificacion:data.identificacion,
-      dx1:data.dx1,
-      cups: data.cups,
+      identificacion: data.identificacion,
+      dx1: data.dx1,
+      cups:data.cups,
+      tiene_correo: data.tiene_correo,
+     
+      
+
       user: {
         connect: {
           id: parseInt(session.user.id),
