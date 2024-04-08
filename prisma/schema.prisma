@@ -18,6 +18,7 @@ model User {
   name String
   email String @unique
   password String
+  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -26,15 +27,108 @@ model User {
 
 model Project {
   id Int @id @default(autoincrement())
-  title String
+  title String 
   description String
   identificacion String
   dx1 String
   cups String
-  tiene_correo String
+  especialidad String
+  medico_especialista String
+  observacion String @default("")
+  presupuesto_regional_actual String
+  costo_total_cups_relacionados String
+  saldo_de_presupuesto String
+  definicion_comite_regional String
+  triage String
+  observaciones_comite String
+  pertinencia_medica String
+  fecha_de_cirugia DateTime
+  numero_de_orden_qx String
+  observaciones_trabajadora_social String
+  cirugia_ejecutada String
+  
   userId Int
   user User @relation(fields: [userId], references: [id])
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model  especialidad {
+  id Int @id @default(autoincrement())
+  especialidades String
+  description_especialidades String
+}
+
+model diagnostico {
+id Int @id @default(autoincrement())
+simbolo String
+description String
+sexo String
+limite_inferior Int
+limite_superior Int
+afeccion_principal Int
+observaciones String
+}
+
+
+
+model cups {
+id Int @id @default(autoincrement())
+codigo String
+nombre String
+num_grupo Int
+regional String
+resolucion_cups String
+valor Int
+nivel Int
+}
+
+
+model sedes {
+  id Int @id @default(autoincrement())
+  nombre_sede String
+  codigo_sede Int
+  codigo_contrato Int
+  departamento String
+  regional String
+  estado String
+}
+
+model medicos {
+  id Int @id @default(autoincrement())
+  nombre_medico String
+  codigo_medico Int
+  direcion_medico String
+  email_medico String
+  codigo_sede Int
+  especialidades String
+  regional String
+  sede String
+}
+
+
+model paciente {
+  id Int @id @default(autoincrement())
+  identificacion String
+  nombre_completo String
+  fecha_nacimiento DateTime
+  edad_actual Int
+  sexo String
+  sede_atencion String
+  departamento String
+  regional String
+  municipio String
+  direccion_paciente String
+  barrio String
+  telefono1 String
+  telefono2 String
+  correo_electronico String
+  tiene_redes_sociales_paciente String
+  tiene_correo_paciente String  
+}
+
+model regional {
+   id Int @id @default(autoincrement())
+   regional String
+
 }
